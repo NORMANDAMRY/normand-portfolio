@@ -11,6 +11,17 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'J.A.R.V.I.S. — AI Voice Assistant',
+    description: 'Locally-run AI voice assistant with wake word detection, TTS/STT, and multi-skill support.',
+    longDescription: 'J.A.R.V.I.S. (Just A Rather Very Intelligent System) is a full-featured, locally-run AI voice assistant inspired by Iron Man. Built with Python, it features wake word detection ("Hey Jarvis"), speech-to-text via Whisper, custom Jarvis-voiced text-to-speech via Piper TTS, and an LLM-powered brain using the OpenCode API. Includes skills for web search, email, file operations, computer control, stock market analysis, and code assistance. Features both voice and web dashboard interfaces with Win+J hotkey support.',
+    tech: ['Python', 'FastAPI', 'Whisper', 'Piper TTS', 'OpenCode LLM', 'WebSocket', 'PyAutoGUI'],
+    category: 'ai',
+    links: [
+      { label: 'GitHub', url: 'https://github.com/NORMANDAMRY/JARVIS' },
+    ],
+    date: 'July 2026',
+  },
+  {
     title: 'KrakenAi — Multi-Provider AI Assistant',
     description: 'ChatGPT-style AI assistant with 6+ LLM providers, vision analysis, and RAG pipeline.',
     longDescription: 'Designed and built a multi-provider LLM API gateway with FastAPI, supporting 6+ AI providers with unified request handling, rate limiting, and automatic failover. Built a RAG pipeline using ChromaDB with 95%+ retrieval accuracy. Deployed 3 serverless functions on Supabase Edge Functions with validation, error handling, and caching (reduced response time by 35%). Implemented real-time streaming via WebSocket and SSE, achieving sub-second first-token latency.',
