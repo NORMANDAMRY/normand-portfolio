@@ -1,4 +1,4 @@
-import { Mail, Heart } from 'lucide-react'
+import { Mail } from 'lucide-react'
 import { GithubIcon, LinkedinIcon } from './Icons'
 
 export default function Footer() {
@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-500 dark:text-slate-400 flex items-center gap-1">
-            Built with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> by Normand Amry
+            Built with <span className="text-red-500">&hearts;</span> by Normand Amry
           </p>
           <div className="flex items-center gap-4">
             <a
