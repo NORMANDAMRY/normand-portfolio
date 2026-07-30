@@ -5,6 +5,7 @@ export interface Project {
   tech: string[]
   category: 'web' | 'mobile' | 'desktop' | 'ai' | 'networking' | 'embedded'
   image?: string
+  images?: string[]
   links: { label: string; url: string }[]
   date: string
 }
@@ -68,18 +69,22 @@ export const projects: Project[] = [
   {
     title: 'CCTV Installation — MH Life Manjung',
     description: 'Led CCTV installation and structured cable management for commercial facility.',
-    longDescription: 'Led a team for CCTV installation and structured cable management at a commercial facility. Performed site survey, camera placement, and DVR/NVR configuration. Managed structured cabling and ensured proper network connectivity for all cameras.',
-    tech: ['DVR/NVR', 'CCTV', 'Structured Cabling', 'Site Survey'],
+    longDescription: 'Led a team for CCTV installation and structured cable management at a commercial facility. Performed site survey, camera placement, and DVR/NVR configuration. Managed structured cabling and ensured proper network connectivity for all cameras.\n\nThis was my FYP for my Diploma in Networking Technology. The project covered the full installation lifecycle: site surveying, camera placement planning, drilling and mounting, cable routing and termination, DVR/NVR setup, and system testing.',
+    tech: ['DVR/NVR', 'CCTV', 'Structured Cabling', 'Site Survey', 'Networking'],
     category: 'networking',
+    image: '/images/cctv-1.png',
+    images: ['/images/cctv-1.png', '/images/cctv-2.png', '/images/cctv-3.png', '/images/cctv-4.png', '/images/cctv-5.png'],
     links: [],
     date: 'November 2025',
   },
   {
     title: 'Smart Following Robot',
-    description: 'Obstacle-detection and motion-tracking robot with ultrasonic sensors.',
-    longDescription: 'Built an obstacle-detection and motion-tracking robot using Arduino and C++ with ultrasonic sensors. The robot can detect obstacles in its path and follow a moving target autonomously.',
-    tech: ['Arduino', 'C++', 'Ultrasonic Sensors'],
+    description: 'Autonomous mobile robot that detects and tracks targets using ultrasonic sensors and servo-driven visual scanning.',
+    longDescription: 'An autonomous mobile robotic platform built as a practical project for a Microprocessors and Microcontrollers course. The robot uses real-time sensor feedback and closed-loop control to detect, track, and dynamically follow a target object while maintaining a safe distance.\n\n- Autonomous object following via ultrasonic distance measurements\n- Pan-and-tilt visual tracking with servo-driven sensor head for expanded field of view\n- Differential drive motion control with multi-wheel chassis\n\nHardware: Arduino MCU, HC-SR04 ultrasonic sensor, micro servo motor, DC gear motors with motor driver, custom 3D-printed mounting brackets\n\nFirmware: Embedded C/C++ control logic handling concurrent sensor polling, servo positioning, and motor actuation. Real-time conditional algorithms translate distance inputs into directional adjustments. PWM speed regulation governs motor velocity based on proximity.',
+    tech: ['Arduino', 'C/C++', 'Ultrasonic Sensors', 'Servo Motors', 'PWM Control', '3D Printing'],
     category: 'embedded',
+    image: '/images/robot-1.png',
+    images: ['/images/robot-1.png', '/images/robot-2.png', '/images/robot-3.png'],
     links: [
       { label: 'GitHub', url: 'https://github.com/NORMANDAMRY' },
     ],

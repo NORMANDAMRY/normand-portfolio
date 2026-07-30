@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Menu, X, Mail } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import ThemeToggle from './ThemeToggle'
 import { GithubIcon } from './Icons'
 
@@ -16,9 +16,11 @@ const navItems = [
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('')
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
       const sections = navItems.map((item) => item.href.replace('#', ''))
       const scrollPos = window.scrollY + 100
       for (const section of sections) {
@@ -40,10 +42,10 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-nord6/80 dark:bg-nord0/80 backdrop-blur-md border-b border-nord4 dark:border-nord2">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'glass shadow-lg' : 'bg-transparent'}`}>
       <nav className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        <a href="/" className="text-lg font-bold text-nord0 dark:text-nord4">
-          Normand<span className="text-nord10 dark:text-nord8">.dev</span>
+        <a href="/" className="text-lg font-bold text-surface">
+          Normand<span className="text-accent">.dev</span>
         </a>
 
         <div className="hidden md:flex items-center gap-1">
@@ -59,36 +61,35 @@ export default function Header() {
               }}
               className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                 activeSection === item.href.replace('#', '') && !item.href.startsWith('/')
-                  ? 'text-nord10 dark:text-nord8 bg-nord10/10 dark:bg-nord8/10'
-                  : 'text-nord3 dark:text-nord5 hover:text-nord0 dark:hover:text-nord4 hover:bg-nord5 dark:hover:bg-nord1'
+                  ? 'text-accent bg-white/10 dark:bg-white/10'
+                  : 'text-secondary hover:text-surface hover-bg-surface'
               }`}
             >
               {item.label}
             </a>
           ))}
-          <div className="flex items-center gap-1 ml-2 pl-2 border-l border-nord4 dark:border-nord2">
+          <div className="flex items-center gap-1 ml-2 pl-2 border-l border-muted">
             <a
               href="https://github.com/NORMANDAMRY"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg text-nord3 dark:text-nord5 hover:text-nord0 dark:hover:text-nord4 hover:bg-nord5 dark:hover:bg-nord1 transition-colors"
+              className="p-2 rounded-lg text-secondary hover:text-surface hover-bg-surface transition-colors"
               aria-label="GitHub"
             >
               <GithubIcon className="w-5 h-5" />
             </a>
+            <ThemeToggle />
             <a
               href="mailto:amry0863@gmail.com"
-              className="p-2 rounded-lg text-nord3 dark:text-nord5 hover:text-nord0 dark:hover:text-nord4 hover:bg-nord5 dark:hover:bg-nord1 transition-colors"
-              aria-label="Email"
+              className="ml-1 px-4 py-2 bg-cta hover:bg-cta-hover text-white rounded-xl text-sm font-medium transition-colors"
             >
-              <Mail className="w-5 h-5" />
+              Book a Call
             </a>
-            <ThemeToggle />
           </div>
         </div>
 
         <button
-          className="md:hidden p-2 rounded-lg text-nord3 dark:text-nord5 hover:bg-nord5 dark:hover:bg-nord1 cursor-pointer"
+          className="md:hidden p-2 rounded-lg text-secondary hover-bg-surface cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Menu"
         >
@@ -97,7 +98,7 @@ export default function Header() {
       </nav>
 
       {isOpen && (
-        <div className="md:hidden border-t border-nord4 dark:border-nord2 bg-nord6 dark:bg-nord0">
+        <div className="md:hidden border-t border-muted glass">
           <div className="px-4 py-3 space-y-1">
             {navItems.map((item) => (
               <a
@@ -109,27 +110,27 @@ export default function Header() {
                     handleNavClick(item.href)
                   }
                 }}
-                className="block px-3 py-2 rounded-lg text-sm font-medium text-nord3 dark:text-nord5 hover:text-nord0 dark:hover:text-nord4 hover:bg-nord5 dark:hover:bg-nord1"
+                className="block px-3 py-2 rounded-lg text-sm font-medium text-secondary hover:text-surface hover-bg-surface"
               >
                 {item.label}
               </a>
             ))}
-            <div className="flex items-center gap-2 pt-2 border-t border-nord4 dark:border-nord2">
+            <div className="flex items-center gap-2 pt-2 border-t border-muted">
               <a
                 href="https://github.com/NORMANDAMRY"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg text-nord3 dark:text-nord5 hover:text-nord0 dark:hover:text-nord4 hover:bg-nord5 dark:hover:bg-nord1"
+                className="p-2 rounded-lg text-secondary hover:text-surface hover-bg-surface"
               >
                 <GithubIcon className="w-5 h-5" />
               </a>
+              <ThemeToggle />
               <a
                 href="mailto:amry0863@gmail.com"
-                className="p-2 rounded-lg text-nord3 dark:text-nord5 hover:text-nord0 dark:hover:text-nord4 hover:bg-nord5 dark:hover:bg-nord1"
+                className="ml-auto px-4 py-2 bg-cta hover:bg-cta-hover text-white rounded-xl text-sm font-medium transition-colors"
               >
-                <Mail className="w-5 h-5" />
+                Book a Call
               </a>
-              <ThemeToggle />
             </div>
           </div>
         </div>
