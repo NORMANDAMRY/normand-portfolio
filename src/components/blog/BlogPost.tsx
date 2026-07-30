@@ -13,10 +13,10 @@ export default function BlogPost() {
     return (
       <div className="min-h-screen pt-24 pb-20 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Post not found</h1>
+          <h1 className="text-2xl font-bold text-gray-100 mb-4">Post not found</h1>
           <Link
             to="/blog"
-            className="inline-flex items-center gap-2 text-violet-600 dark:text-violet-400 hover:underline"
+            className="inline-flex items-center gap-2 text-cyan-400 hover:underline"
           >
             <ArrowLeft className="w-4 h-4" /> Back to blog
           </Link>
@@ -35,28 +35,28 @@ export default function BlogPost() {
         >
           <Link
             to="/blog"
-            className="inline-flex items-center gap-2 text-gray-500 dark:text-slate-400 hover:text-gray-700 dark:hover:text-white mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-muted-light hover:text-gray-100 mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" /> Back to blog
           </Link>
 
           <article>
             <header className="mb-8">
-              <div className="flex items-center gap-2 text-sm text-gray-400 dark:text-slate-500 mb-3">
+              <div className="flex items-center gap-2 text-sm text-muted mb-3">
                 <Calendar className="w-4 h-4" />
                 <time>{post.date}</time>
-                <span className="text-gray-300 dark:text-slate-600">•</span>
+                <span className="text-muted">•</span>
                 <span>{post.readTime} min read</span>
               </div>
-              <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-100">
                 {post.title}
               </h1>
               {post.excerpt && (
-                <p className="text-lg text-gray-500 dark:text-slate-400 mt-4">{post.excerpt}</p>
+                <p className="text-lg text-muted-light mt-4">{post.excerpt}</p>
               )}
             </header>
 
-            <div className="prose max-w-none text-gray-700 dark:text-gray-200">
+            <div className="prose max-w-none text-gray-300">
               <ReactMarkdown remarkPlugins={[remarkGfm]}>
                 {post.content}
               </ReactMarkdown>

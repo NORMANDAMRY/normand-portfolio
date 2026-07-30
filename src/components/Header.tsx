@@ -40,10 +40,10 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-gray-200 dark:border-slate-800">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-deep/80 backdrop-blur-md border-b border-border">
       <nav className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        <a href="/" className="text-lg font-bold text-gray-900 dark:text-white">
-          Normand<span className="text-violet-500">.dev</span>
+        <a href="/" className="text-lg font-bold text-gray-100">
+          Normand<span className="text-cyan-400">.dev</span>
         </a>
 
         <div className="hidden md:flex items-center gap-1">
@@ -59,26 +59,26 @@ export default function Header() {
               }}
               className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                 activeSection === item.href.replace('#', '') && !item.href.startsWith('/')
-                  ? 'text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-900/30'
-                  : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-800'
+                  ? 'text-cyan-400 text-cyan-400 bg-cyan-950/30'
+                  : 'text-muted-light hover:text-gray-100 hover:bg-surface'
               }`}
             >
               {item.label}
             </a>
           ))}
-          <div className="flex items-center gap-1 ml-2 pl-2 border-l border-gray-200 dark:border-slate-700">
+          <div className="flex items-center gap-1 ml-2 pl-2 border-l border-border">
             <a
               href="https://github.com/NORMANDAMRY"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+              className="p-2 rounded-lg text-muted-light hover:text-gray-100 hover:bg-surface transition-colors"
               aria-label="GitHub"
             >
               <GithubIcon className="w-5 h-5" />
             </a>
             <a
               href="mailto:amry0863@gmail.com"
-              className="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+              className="p-2 rounded-lg text-muted-light hover:text-gray-100 hover:bg-surface transition-colors"
               aria-label="Email"
             >
               <Mail className="w-5 h-5" />
@@ -88,7 +88,7 @@ export default function Header() {
         </div>
 
         <button
-          className="md:hidden p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-800 cursor-pointer"
+          className="md:hidden p-2 rounded-lg text-muted-light hover:bg-surface cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Menu"
         >
@@ -97,7 +97,7 @@ export default function Header() {
       </nav>
 
       {isOpen && (
-        <div className="md:hidden border-t border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-900">
+        <div className="md:hidden border-t border-border bg-deep">
           <div className="px-4 py-3 space-y-1">
             {navItems.map((item) => (
               <a
@@ -109,23 +109,23 @@ export default function Header() {
                     handleNavClick(item.href)
                   }
                 }}
-                className="block px-3 py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-800"
+                className="block px-3 py-2 rounded-lg text-sm font-medium text-muted-light hover:text-gray-100 hover:bg-surface"
               >
                 {item.label}
               </a>
             ))}
-            <div className="flex items-center gap-2 pt-2 border-t border-gray-200 dark:border-slate-700">
+            <div className="flex items-center gap-2 pt-2 border-t border-border">
               <a
                 href="https://github.com/NORMANDAMRY"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-800"
+                className="p-2 rounded-lg text-muted-light hover:text-gray-100 hover:bg-surface"
               >
             <GithubIcon className="w-5 h-5" />
               </a>
               <a
                 href="mailto:amry0863@gmail.com"
-                className="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-800"
+                className="p-2 rounded-lg text-muted-light hover:text-gray-100 hover:bg-surface"
               >
                 <Mail className="w-5 h-5" />
               </a>

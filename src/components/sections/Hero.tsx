@@ -11,16 +11,18 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-violet-600 dark:text-violet-400 font-medium mb-4">
-            Hello, I'm
-          </p>
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-cyan-950/50 border border-cyan-900 rounded-full text-sm text-cyan-400 font-mono mb-6">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="text-emerald-400">$</span> system.init() — online
+          </div>
+          <p className="text-cyan-400 font-mono text-sm mb-2">$ hello --who-am-i</p>
+          <h1 className="text-5xl md:text-7xl font-bold text-gray-100 mb-2">
             Normand Amry
           </h1>
-          <h2 className="text-2xl md:text-3xl text-gray-600 dark:text-gray-400 mb-6">
-            Networking &amp; Software Engineer
+          <h2 className="text-2xl md:text-3xl text-muted-light mb-6 font-mono">
+            {'<'}Networking &amp; Software Engineer{'/>'}
           </h2>
-          <p className="text-lg text-gray-500 dark:text-slate-400 max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-muted-light max-w-2xl mx-auto mb-8">
             Fresh graduate with a Diploma in Networking Technology, passionate about building
             full-stack applications, AI systems, and network infrastructure.
           </p>
@@ -29,7 +31,7 @@ export default function Hero() {
             <a
               href="/resume.pdf"
               download
-              className="inline-flex items-center gap-2 px-6 py-3 bg-violet-600 text-white rounded-xl hover:bg-violet-700 transition-colors font-medium"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-cyan-600 text-white rounded-xl hover:bg-cyan-500 transition-colors font-medium"
             >
               <FileText className="w-5 h-5" />
               Download CV
@@ -38,14 +40,14 @@ export default function Hero() {
               href="https://github.com/NORMANDAMRY"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 dark:bg-slate-800 text-gray-700 dark:text-gray-200 rounded-xl hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors font-medium"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-card text-gray-200 border border-border hover:border-cyan-500/50 rounded-xl hover:bg-surface transition-colors font-medium"
             >
               <GithubIcon className="w-5 h-5" />
               GitHub
             </a>
             <a
               href="mailto:amry0863@gmail.com"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 dark:bg-slate-800 text-gray-700 dark:text-gray-200 rounded-xl hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors font-medium"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-card text-gray-200 border border-border hover:border-cyan-500/50 rounded-xl hover:bg-surface transition-colors font-medium"
             >
               <Mail className="w-5 h-5" />
               Email
@@ -54,7 +56,7 @@ export default function Hero() {
               href="https://linkedin.com/in/normand-amry"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gray-100 dark:bg-slate-800 text-gray-700 dark:text-gray-200 rounded-xl hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors font-medium"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-card text-gray-200 border border-border hover:border-cyan-500/50 rounded-xl hover:bg-surface transition-colors font-medium"
             >
               <LinkedinIcon className="w-5 h-5" />
               LinkedIn
@@ -74,7 +76,7 @@ export default function Hero() {
               e.preventDefault()
               document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })
             }}
-            className="inline-flex flex-col items-center text-gray-400 dark:text-slate-500 hover:text-gray-600 dark:hover:text-slate-300 transition-colors"
+            className="inline-flex flex-col items-center text-muted hover:text-muted-light transition-colors"
           >
             <span className="text-sm mb-2">Scroll down</span>
             <ArrowDown className="w-5 h-5 animate-bounce" />

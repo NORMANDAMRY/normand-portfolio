@@ -11,8 +11,8 @@ export default function Skills() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-            Technical <span className="text-violet-600 dark:text-violet-400">Skills</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-12 text-center">
+            Technical <span className="text-cyan-400">Skills</span>
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -23,16 +23,16 @@ export default function Skills() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05, duration: 0.4 }}
-                className="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-gray-200 dark:border-slate-700"
+                className="bg-card rounded-2xl p-6 border border-border"
               >
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                <h3 className="text-lg font-semibold text-gray-100 mb-4">
                   {group.category}
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {group.items.map((skill) => (
                     <span
                       key={skill}
-                      className="px-3 py-1.5 bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-200 rounded-lg text-sm font-medium"
+                      className="px-3 py-1.5 bg-surface text-gray-200 rounded-lg text-sm font-medium"
                     >
                       {skill}
                     </span>
