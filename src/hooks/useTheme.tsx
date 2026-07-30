@@ -13,7 +13,7 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>(() => {
     const stored = localStorage.getItem('theme')
     if (stored === 'dark' || stored === 'light') return stored
-    return 'dark'
+    return 'light'
   })
 
   useEffect(() => {

@@ -12,56 +12,56 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-100 mb-4 text-center">
-            Get In <span className="text-cyan-400">Touch</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-nord0 dark:text-nord4 mb-4 text-center">
+            Get In <span className="text-nord10 dark:text-nord8">Touch</span>
           </h2>
-          <p className="text-muted-light text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-nord3 dark:text-nord5 text-center mb-12 max-w-2xl mx-auto">
             Have a question or want to work together? Feel free to reach out!
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="space-y-6">
-              <div className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border">
-                <div className="p-3 bg-cyan-950/50 rounded-lg">
-                  <Mail className="w-5 h-5 text-cyan-400" />
+              <div className="flex items-center gap-4 p-4 bg-white dark:bg-nord2 rounded-xl border border-nord4 dark:border-nord2">
+                <div className="p-3 bg-nord10/10 dark:bg-nord8/10 rounded-lg">
+                  <Mail className="w-5 h-5 text-nord10 dark:text-nord8" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-light">Email</p>
-                  <a href="mailto:amry0863@gmail.com" className="font-medium text-gray-100 hover:text-cyan-400">
+                  <p className="text-sm text-nord3 dark:text-nord5">Email</p>
+                  <a href="mailto:amry0863@gmail.com" className="font-medium text-nord0 dark:text-nord4 hover:text-nord10 dark:hover:text-nord8">
                     amry0863@gmail.com
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border">
-                <div className="p-3 bg-cyan-950/50 rounded-lg">
-                  <Phone className="w-5 h-5 text-cyan-400" />
+              <div className="flex items-center gap-4 p-4 bg-white dark:bg-nord2 rounded-xl border border-nord4 dark:border-nord2">
+                <div className="p-3 bg-nord10/10 dark:bg-nord8/10 rounded-lg">
+                  <Phone className="w-5 h-5 text-nord10 dark:text-nord8" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-light">Phone</p>
-                  <a href="tel:+60189066353" className="font-medium text-gray-100 hover:text-cyan-400">
+                  <p className="text-sm text-nord3 dark:text-nord5">Phone</p>
+                  <a href="tel:+60189066353" className="font-medium text-nord0 dark:text-nord4 hover:text-nord10 dark:hover:text-nord8">
                     +60 18-906 6353
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border">
-                <div className="p-3 bg-cyan-950/50 rounded-lg">
-                  <MapPin className="w-5 h-5 text-cyan-400" />
+              <div className="flex items-center gap-4 p-4 bg-white dark:bg-nord2 rounded-xl border border-nord4 dark:border-nord2">
+                <div className="p-3 bg-nord10/10 dark:bg-nord8/10 rounded-lg">
+                  <MapPin className="w-5 h-5 text-nord10 dark:text-nord8" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-light">Location</p>
-                  <p className="font-medium text-gray-100">Bangi, Selangor, Malaysia</p>
+                  <p className="text-sm text-nord3 dark:text-nord5">Location</p>
+                  <p className="font-medium text-nord0 dark:text-nord4">Bangi, Selangor, Malaysia</p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 bg-card rounded-xl border border-border">
-                <div className="p-3 bg-cyan-950/50 rounded-lg">
-                  <GithubIcon className="w-5 h-5 text-cyan-400" />
+              <div className="flex items-center gap-4 p-4 bg-white dark:bg-nord2 rounded-xl border border-nord4 dark:border-nord2">
+                <div className="p-3 bg-nord10/10 dark:bg-nord8/10 rounded-lg">
+                  <GithubIcon className="w-5 h-5 text-nord10 dark:text-nord8" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-light">GitHub</p>
-                  <a href="https://github.com/NORMANDAMRY" target="_blank" rel="noopener noreferrer" className="font-medium text-gray-100 hover:text-cyan-400">
+                  <p className="text-sm text-nord3 dark:text-nord5">GitHub</p>
+                  <a href="https://github.com/NORMANDAMRY" target="_blank" rel="noopener noreferrer" className="font-medium text-nord0 dark:text-nord4 hover:text-nord10 dark:hover:text-nord8">
                     /NORMANDAMRY
                   </a>
                 </div>
@@ -71,10 +71,10 @@ export default function Contact() {
             <form
               action="https://formspree.io/f/amry0863@gmail.com"
               method="POST"
-              className="bg-card rounded-2xl p-6 border border-border space-y-4"
+              className="bg-white dark:bg-nord2 rounded-2xl p-6 border border-nord4 dark:border-nord2 space-y-4"
             >
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-muted-light mb-1">
+                <label htmlFor="name" className="block text-sm font-medium text-nord3 dark:text-nord5 mb-1">
                   Name
                 </label>
                 <input
@@ -82,11 +82,11 @@ export default function Contact() {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-2.5 rounded-xl border border-border bg-surface text-gray-100 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  className="w-full px-4 py-2.5 rounded-xl border border-nord4 dark:border-nord2 bg-nord6 dark:bg-nord1 text-nord0 dark:text-nord4 focus:outline-none focus:ring-2 focus:ring-nord9"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-muted-light mb-1">
+                <label htmlFor="email" className="block text-sm font-medium text-nord3 dark:text-nord5 mb-1">
                   Email
                 </label>
                 <input
@@ -94,11 +94,11 @@ export default function Contact() {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-2.5 rounded-xl border border-border bg-surface text-gray-100 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                  className="w-full px-4 py-2.5 rounded-xl border border-nord4 dark:border-nord2 bg-nord6 dark:bg-nord1 text-nord0 dark:text-nord4 focus:outline-none focus:ring-2 focus:ring-nord9"
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-muted-light mb-1">
+                <label htmlFor="message" className="block text-sm font-medium text-nord3 dark:text-nord5 mb-1">
                   Message
                 </label>
                 <textarea
@@ -106,12 +106,12 @@ export default function Contact() {
                   name="message"
                   rows={4}
                   required
-                  className="w-full px-4 py-2.5 rounded-xl border border-border bg-surface text-gray-100 focus:outline-none focus:ring-2 focus:ring-cyan-500 resize-none"
+                  className="w-full px-4 py-2.5 rounded-xl border border-nord4 dark:border-nord2 bg-nord6 dark:bg-nord1 text-nord0 dark:text-nord4 focus:outline-none focus:ring-2 focus:ring-nord9 resize-none"
                 />
               </div>
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-cyan-600 text-white rounded-xl hover:bg-cyan-500 transition-colors font-medium cursor-pointer"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-nord10 text-white rounded-xl hover:bg-nord9 transition-colors font-medium cursor-pointer"
               >
                 <Send className="w-4 h-4" />
                 Send Message

@@ -40,10 +40,10 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-deep/80 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-nord6/80 dark:bg-nord0/80 backdrop-blur-md border-b border-nord4 dark:border-nord2">
       <nav className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-        <a href="/" className="text-lg font-bold text-gray-100">
-          Normand<span className="text-cyan-400">.dev</span>
+        <a href="/" className="text-lg font-bold text-nord0 dark:text-nord4">
+          Normand<span className="text-nord10 dark:text-nord8">.dev</span>
         </a>
 
         <div className="hidden md:flex items-center gap-1">
@@ -59,26 +59,26 @@ export default function Header() {
               }}
               className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                 activeSection === item.href.replace('#', '') && !item.href.startsWith('/')
-                  ? 'text-cyan-400 text-cyan-400 bg-cyan-950/30'
-                  : 'text-muted-light hover:text-gray-100 hover:bg-surface'
+                  ? 'text-nord10 dark:text-nord8 bg-nord10/10 dark:bg-nord8/10'
+                  : 'text-nord3 dark:text-nord5 hover:text-nord0 dark:hover:text-nord4 hover:bg-nord5 dark:hover:bg-nord1'
               }`}
             >
               {item.label}
             </a>
           ))}
-          <div className="flex items-center gap-1 ml-2 pl-2 border-l border-border">
+          <div className="flex items-center gap-1 ml-2 pl-2 border-l border-nord4 dark:border-nord2">
             <a
               href="https://github.com/NORMANDAMRY"
               target="_blank"
               rel="noopener noreferrer"
-              className="p-2 rounded-lg text-muted-light hover:text-gray-100 hover:bg-surface transition-colors"
+              className="p-2 rounded-lg text-nord3 dark:text-nord5 hover:text-nord0 dark:hover:text-nord4 hover:bg-nord5 dark:hover:bg-nord1 transition-colors"
               aria-label="GitHub"
             >
               <GithubIcon className="w-5 h-5" />
             </a>
             <a
               href="mailto:amry0863@gmail.com"
-              className="p-2 rounded-lg text-muted-light hover:text-gray-100 hover:bg-surface transition-colors"
+              className="p-2 rounded-lg text-nord3 dark:text-nord5 hover:text-nord0 dark:hover:text-nord4 hover:bg-nord5 dark:hover:bg-nord1 transition-colors"
               aria-label="Email"
             >
               <Mail className="w-5 h-5" />
@@ -88,7 +88,7 @@ export default function Header() {
         </div>
 
         <button
-          className="md:hidden p-2 rounded-lg text-muted-light hover:bg-surface cursor-pointer"
+          className="md:hidden p-2 rounded-lg text-nord3 dark:text-nord5 hover:bg-nord5 dark:hover:bg-nord1 cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Menu"
         >
@@ -97,7 +97,7 @@ export default function Header() {
       </nav>
 
       {isOpen && (
-        <div className="md:hidden border-t border-border bg-deep">
+        <div className="md:hidden border-t border-nord4 dark:border-nord2 bg-nord6 dark:bg-nord0">
           <div className="px-4 py-3 space-y-1">
             {navItems.map((item) => (
               <a
@@ -109,23 +109,23 @@ export default function Header() {
                     handleNavClick(item.href)
                   }
                 }}
-                className="block px-3 py-2 rounded-lg text-sm font-medium text-muted-light hover:text-gray-100 hover:bg-surface"
+                className="block px-3 py-2 rounded-lg text-sm font-medium text-nord3 dark:text-nord5 hover:text-nord0 dark:hover:text-nord4 hover:bg-nord5 dark:hover:bg-nord1"
               >
                 {item.label}
               </a>
             ))}
-            <div className="flex items-center gap-2 pt-2 border-t border-border">
+            <div className="flex items-center gap-2 pt-2 border-t border-nord4 dark:border-nord2">
               <a
                 href="https://github.com/NORMANDAMRY"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-lg text-muted-light hover:text-gray-100 hover:bg-surface"
+                className="p-2 rounded-lg text-nord3 dark:text-nord5 hover:text-nord0 dark:hover:text-nord4 hover:bg-nord5 dark:hover:bg-nord1"
               >
-            <GithubIcon className="w-5 h-5" />
+                <GithubIcon className="w-5 h-5" />
               </a>
               <a
                 href="mailto:amry0863@gmail.com"
-                className="p-2 rounded-lg text-muted-light hover:text-gray-100 hover:bg-surface"
+                className="p-2 rounded-lg text-nord3 dark:text-nord5 hover:text-nord0 dark:hover:text-nord4 hover:bg-nord5 dark:hover:bg-nord1"
               >
                 <Mail className="w-5 h-5" />
               </a>

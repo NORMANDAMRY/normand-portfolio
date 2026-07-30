@@ -13,10 +13,10 @@ export default function BlogPost() {
     return (
       <div className="min-h-screen pt-24 pb-20 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-100 mb-4">Post not found</h1>
+          <h1 className="text-2xl font-bold text-nord0 dark:text-nord4 mb-4">Post not found</h1>
           <Link
             to="/blog"
-            className="inline-flex items-center gap-2 text-cyan-400 hover:underline"
+            className="inline-flex items-center gap-2 text-nord10 dark:text-nord8 hover:underline"
           >
             <ArrowLeft className="w-4 h-4" /> Back to blog
           </Link>
@@ -35,28 +35,28 @@ export default function BlogPost() {
         >
           <Link
             to="/blog"
-            className="inline-flex items-center gap-2 text-muted-light hover:text-gray-100 mb-8 transition-colors"
+            className="inline-flex items-center gap-2 text-nord3 dark:text-nord5 hover:text-nord0 dark:hover:text-nord4 mb-8 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" /> Back to blog
           </Link>
 
           <article>
             <header className="mb-8">
-              <div className="flex items-center gap-2 text-sm text-muted mb-3">
+              <div className="flex items-center gap-2 text-sm text-nord3 dark:text-nord5 mb-3">
                 <Calendar className="w-4 h-4" />
                 <time>{post.date}</time>
-                <span className="text-muted">•</span>
+                <span className="text-nord4 dark:border-nord2">•</span>
                 <span>{post.readTime} min read</span>
               </div>
-              <h1 className="text-3xl md:text-4xl font-bold text-gray-100">
+              <h1 className="text-3xl md:text-4xl font-bold text-nord0 dark:text-nord4">
                 {post.title}
               </h1>
               {post.excerpt && (
-                <p className="text-lg text-muted-light mt-4">{post.excerpt}</p>
+                <p className="text-lg text-nord3 dark:text-nord5 mt-4">{post.excerpt}</p>
               )}
             </header>
 
-            <div className="prose max-w-none text-gray-300">
+            <div className="prose max-w-none dark:text-nord4">
               <ReactMarkdown remarkPlugins={[remarkGfm]}>
                 {post.content}
               </ReactMarkdown>

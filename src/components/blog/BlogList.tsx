@@ -12,10 +12,10 @@ export default function BlogList() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-100 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-nord0 dark:text-nord4 mb-4">
             Blog
           </h1>
-          <p className="text-lg text-muted-light mb-12">
+          <p className="text-lg text-nord3 dark:text-nord5 mb-12">
             Thoughts, experiences, and things I've learned along the way.
           </p>
 
@@ -30,21 +30,21 @@ export default function BlogList() {
               >
                 <Link
                   to={`/blog/${post.slug}`}
-                  className="block bg-card rounded-2xl p-6 border border-border hover:border-cyan-500 transition-all"
+                  className="block bg-white dark:bg-nord2 rounded-2xl p-6 border border-nord4 dark:border-nord2 hover:border-nord9 transition-all"
                 >
-                  <div className="flex items-center gap-2 text-sm text-muted-light mb-3">
+                  <div className="flex items-center gap-2 text-sm text-nord3 dark:text-nord5 mb-3">
                     <Calendar className="w-4 h-4" />
                     <time>{post.date}</time>
-                    <span className="text-muted">•</span>
+                    <span className="text-nord4 dark:border-nord2">•</span>
                     <span>{post.readTime} min read</span>
                   </div>
-                  <h2 className="text-xl font-semibold text-gray-100 mb-2 group-hover:text-cyan-400 transition-colors">
+                  <h2 className="text-xl font-semibold text-nord0 dark:text-nord4 mb-2 group-hover:text-nord10 dark:group-hover:text-nord8 transition-colors">
                     {post.title}
                   </h2>
-                  <p className="text-muted-light mb-4">
+                  <p className="text-nord3 dark:text-nord5 mb-4">
                     {post.excerpt}
                   </p>
-                  <div className="flex items-center gap-2 text-sm font-medium text-cyan-400">
+                  <div className="flex items-center gap-2 text-sm font-medium text-nord10 dark:text-nord8">
                     Read more <ArrowRight className="w-4 h-4" />
                   </div>
                 </Link>

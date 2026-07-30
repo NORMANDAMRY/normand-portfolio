@@ -30,7 +30,7 @@ export default function App() {
   return (
     <ThemeProvider>
       <Router>
-        <div className="min-h-screen bg-deep text-gray-100 bg-grid transition-colors">
+        <div className="min-h-screen bg-nord6 dark:bg-nord0 text-nord0 dark:text-nord4 transition-colors">
           <Header />
           <Routes>
             <Route path="/" element={<HomePage />} />
