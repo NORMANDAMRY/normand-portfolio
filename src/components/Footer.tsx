@@ -6,8 +6,8 @@ export default function Footer() {
     <footer className="border-t border-gray-200 dark:border-slate-800 bg-gray-50 dark:bg-slate-900/50">
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-gray-500 dark:text-slate-400 flex items-center gap-1">
-            Built with <span className="text-red-500">&hearts;</span> by Normand Amry
+          <p className="text-sm text-gray-500 dark:text-slate-400">
+            Normand Amry
           </p>
           <div className="flex items-center gap-4">
             <a
