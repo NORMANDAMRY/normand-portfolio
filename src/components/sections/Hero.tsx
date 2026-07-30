@@ -51,7 +51,7 @@ export default function Hero() {
               Email
             </a>
             <a
-              href="https://linkedin.com/in/normand-amry"
+              href="https://linkedin.com/in/amry-razak-b305973a0"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-white dark:bg-nord2 text-nord0 dark:text-nord4 rounded-xl border border-nord4 dark:border-nord2 hover:border-nord9 transition-colors font-medium"

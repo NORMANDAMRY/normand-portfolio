@@ -27,7 +27,7 @@ export default function Footer() {
               <Mail className="w-5 h-5" />
             </a>
             <a
-              href="https://linkedin.com/in/normand-amry"
+              href="https://linkedin.com/in/amry-razak-b305973a0"
               target="_blank"
               rel="noopener noreferrer"
               className="text-nord3 dark:text-nord5 hover:text-nord0 dark:hover:text-nord4 transition-colors"
